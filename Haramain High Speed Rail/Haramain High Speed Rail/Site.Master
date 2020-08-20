@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Haramain_High_Speed_Rail.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="cssRes/style.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Page">
+            <div id="Header">Ticket Reservation<br /></div>
+            <div id="Sidebar"><br />
+              <asp:SiteMapPath ID="SiteMapPath1" runat="server" DataSourceID="SiteMapDataSource1"></asp:SiteMapPath>
+              <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+              <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>
+            </div>
+            <div id="Content" style="left: 19%;">
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
